@@ -21,31 +21,34 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="assets/js/bootstrap.min.js"></script>
-<nav class="hidden-print hidden-xs hidden-sm affix-top">
-    <ul class="nav">
-        <li class>Home</li>
-        <li><a href="resume.html">Resume</a></li>
-        <li>Work Projects
-            <ul>
-                <li>Performance Tests
-                    <ul>
-                        <li>Visual Studio</li>
-                        <li>Grinder</li>
-                    </ul>
-                </li>
-                <li>Managing Test Environments with Fig and Docker</li>
-            </ul>
-        </li>
-        <li>Personal Projects
-            <ul>
-                <li>Hero Combat</li>
-                <li>Traveller</li>
-            </ul>
-        </li>
-    </ul>
+<nav class="navbar nav-header hidden-print hidden-xs hidden-sm affix-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <ul class="nav navbar-nav">
+
+            <li><a href="resume.html">Resume</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Work Projects<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>Performance Tests
+                    <li class="divider"></li>
+                    <li>Visual Studio</li>
+                    <li>Grinder</li>
+                    <li class="divider"></li>
+
+                    <li>Managing Test Environments with Fig and Docker</li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Personal Projects<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>Hero Combat</li>
+                    <li>Traveller</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
 <div class="header" id="content">
-    <div class="container">
+    <div class="container-fluid  bg-primary">
         <h1>Sean Chitwood</h1>
 
         <p>Software Tester Extraordinaire and End to End Test Lead</p>
