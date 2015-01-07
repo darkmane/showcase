@@ -1,3 +1,9 @@
 .fine-line {
-    border:  1px solid black;
+    border:  1px solid grey;
+}
+
+li.extra-wide {
+
+     width: 300px;
+
 }
