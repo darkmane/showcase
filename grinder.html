@@ -60,15 +60,26 @@
 </div>
 <div class="container">
 				<p>
-				Groupon uses an open source project named <a href='http://grinder.sourceforge.net/'>Grinder</a> to execute performance testing. I worked with an internal virtual team to create a web user interface with the following goals:
+				Groupon uses an open source project named <a href='http://grinder.sourceforge.net/'>Grinder</a> to execute performance testing. I worked with an internal virtual team to create a web user interface with the following objectives:
 				</p>
 				<ul>
 			  	<li>Start and stop tests</li>
 		  		<li>Provide a simple UI to prevent confusion and <i>accidentally</i> overloading servers</li>
 					<li>Secure the tool to prevent unauthorized access</li>
 					<li>Prevent tests from interfering with each otehr</li>
-				</ul>
+	</ul>
 
+	    <p>We were able to deliver thses goals in less than a week and present it in a company wide forum for evaluation.</p>
+
+				<p>
+					In addition I created a framework to simplify the script writing process, standardizing how test distributions were created, removing the need for creating a TestRunner class (boilerplate code), and simplifying the use of data for datadriven tests.
+				</p>
+				<p>The virtual team continues to improve the system by adding:</p>
+				<ul>
+								<li>Integration with Jira to only allow approved tests to run</li>
+								<li>Google Calendar integration to prevent scheduling conflicts</li>
+								<li>Github support so all scripts will be under source control</li>
+				</ul>
 </div>
 </body>
 </html>
