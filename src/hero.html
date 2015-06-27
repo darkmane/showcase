@@ -7,7 +7,7 @@
     <title>Sean Chitwood Resume Showcase</title>
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,18 +20,19 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <nav class="navbar nav-header hidden-print hidden-xs hidden-sm affix-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Test Environment</a>
+        <a class="navbar-brand" href="#">Hero Combat</a>
         <ul class="nav navbar-nav">
 
             <li><a href="index.html">Home</a></li>
+
             <li><a href="resume.html">Resume</a></li>
 
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Personal Projects<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-												<li><a href='hero.html'>Hero Combat</a></li>
+												<li>Hero Combat</li>
 												<li><a href='traveller.html'>Traveller</a></li>
                 </ul>
             </li>
@@ -43,7 +44,7 @@
 										<li><a href='grinder.html'>Grinder</a></li>
                     <li class="divider"></li>
 
-                    <li>Managing Test Environments with Fig and Docker</li>
+										<li><a href='test_env.html'>Managing Test Environments</a></li>
                 </ul>
             </li>
         </ul>
@@ -59,20 +60,20 @@
     </div>
 </div>
 <div class="container">
-    <p>
-        I am a software tester with 14 years experience working for Groupon Getaways (travel). Most of my career was at
-        Microsoft, working on Windows (2000 and XP),
-        <b>S</b>ystems <b>M</b>anagement <b>S</b>erver (now <b>S</b>ystem <b>C</b>enter
-        <b>C</b>onfiguration <b>M</b>anager) and then Bing Maps and MSN.com. I have learned functional testing,
-        security review process, exploratory testing and performance testing. The past 5 years I have been working with
-        server based applications and SOA web-services in both Windows and Linux based data centers.
-    </p>
+		<p>
+		This project was started out of a desire to learn about HMTL5 local storage and jQuery. It is meant to help manage combat situations when you are playing <a href='http://www.herogames.com'>Hero System</a> games.
+		</p>
 
+		<p>
+		  The first phase of the project loads <a href='http://www.herogames.com/forums/store/product/1-hero-designer/'>Hero Designer</a> files and presents the GM with whom evers action is next, so all they have to do is load the characters and hit the space bar to keep track of whose action it is. Files can be stored locally, on Google Drive, Box.net or Dropbox. 
+		</p>
     <p>
-        This site is meant to showcase my work, both professional and personal. For obvious reasons I can not share
-        the code of the professional projects but I can share the code that I have written for personal projects.
-        I am a role-playing game fanatic and my personal projects reflect that.
-    </p>
+        The second phase will use node.js and server side caching to allow shared instances.
+				</p>
+
+				<p><a href='https://github.com/darkmane/herocombat'>Git Repo</a></p>
+
+				<p><a href='https://github.com/darkmane/herocombat'>Hosted Instance</a></p>
 </div>
 </body>
 </html>

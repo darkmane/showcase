@@ -1,0 +1,14 @@
+nginx:
+   image: jwilder/nginx-proxy
+   environment:
+      - "DEFAULT_HOST=www.darkmane.me"
+   volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+showcase:
+   image: darkmane/showcase
+   environment:
+      - "VIRTUAL_HOST=www.darkmane.me,192.168.99.100"
+herocombat:
+   image: darkmane/herocombat
+   environment:
+      - "VIRTUAL_HOST=herocombat.darkmane.me"

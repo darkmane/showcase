@@ -7,7 +7,7 @@
     <title>Sean Chitwood Resume Showcase</title>
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,13 +20,13 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <nav class="navbar nav-header hidden-print hidden-xs hidden-sm affix-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Visual Studio</a>
+        <a class="navbar-brand" href="#">Grinder</a>
         <ul class="nav navbar-nav">
 
-            <li><a href="resume.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
 
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Personal Projects<span class="caret"></span></a>
@@ -59,20 +59,27 @@
     </div>
 </div>
 <div class="container">
-    <p>
-        I am a software tester with 14 years experience working for Groupon Getaways (travel). Most of my career was at
-        Microsoft, working on Windows (2000 and XP),
-        <b>S</b>ystems <b>M</b>anagement <b>S</b>erver (now <b>S</b>ystem <b>C</b>enter
-        <b>C</b>onfiguration <b>M</b>anager) and then Bing Maps and MSN.com. I have learned functional testing,
-        security review process, exploratory testing and performance testing. The past 5 years I have been working with
-        server based applications and SOA web-services in both Windows and Linux based data centers.
-    </p>
+				<p>
+				Groupon uses an open source project named <a href='http://grinder.sourceforge.net/'>Grinder</a> to execute performance testing. I worked with an internal virtual team to create a web user interface with the following objectives:
+				</p>
+				<ul>
+			  	<li>Start and stop tests</li>
+		  		<li>Provide a simple UI to prevent confusion and <i>accidentally</i> overloading servers</li>
+					<li>Secure the tool to prevent unauthorized access</li>
+					<li>Prevent tests from interfering with each otehr</li>
+	</ul>
 
-    <p>
-        This site is meant to showcase my work, both professional and personal. For obvious reasons I can not share
-        the code of the professional projects but I can share the code that I have written for personal projects.
-        I am a role-playing game fanatic and my personal projects reflect that.
-    </p>
+	    <p>We were able to deliver thses goals in less than a week and present it in a company wide forum for evaluation.</p>
+
+				<p>
+					In addition I created a framework to simplify the script writing process, standardizing how test distributions were created, removing the need for creating a TestRunner class (boilerplate code), and simplifying the use of data for datadriven tests.
+				</p>
+				<p>The virtual team continues to improve the system by adding:</p>
+				<ul>
+								<li>Integration with Jira to only allow approved tests to run</li>
+								<li>Google Calendar integration to prevent scheduling conflicts</li>
+								<li>Github support so all scripts will be under source control</li>
+				</ul>
 </div>
 </body>
 </html>

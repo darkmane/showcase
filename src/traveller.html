@@ -7,7 +7,7 @@
     <title>Sean Chitwood Resume Showcase</title>
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,20 +20,19 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <nav class="navbar nav-header hidden-print hidden-xs hidden-sm affix-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hero Combat</a>
+        <a class="navbar-brand" href="#">Traveller</a>
         <ul class="nav navbar-nav">
 
             <li><a href="index.html">Home</a></li>
-
             <li><a href="resume.html">Resume</a></li>
 
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Personal Projects<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-												<li>Hero Combat</li>
-												<li><a href='traveller.html'>Traveller</a></li>
+												<li><a href='hero.html'>Hero Combat</a></li>
+												<li>Traveller</li>
                 </ul>
             </li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Work Projects<span class="caret"></span></a>
@@ -43,7 +42,6 @@
 										<li><a href='vsts.html'>Visual Studio</a></li>
 										<li><a href='grinder.html'>Grinder</a></li>
                     <li class="divider"></li>
-
 										<li><a href='test_env.html'>Managing Test Environments</a></li>
                 </ul>
             </li>
@@ -60,20 +58,11 @@
     </div>
 </div>
 <div class="container">
-		<p>
-		This project was started out of a desire to learn about HMTL5 local storage and jQuery. It is meant to help manage combat situations when you are playing <a href='http://www.herogames.com'>Hero System</a> games.
-		</p>
+		<p>This project started out as a library of tools for <a href='http://www.farfuture.net'>Traveller</a>. I started helping out by cleaning up the implementation.</p>
 
-		<p>
-		  The first phase of the project loads <a href='http://www.herogames.com/forums/store/product/1-hero-designer/'>Hero Designer</a> files and presents the GM with whom evers action is next, so all they have to do is load the characters and hit the space bar to keep track of whose action it is. Files can be stored locally, on Google Drive, Box.net or Dropbox. 
-		</p>
-    <p>
-        The second phase will use node.js and server side caching to allow shared instances.
-				</p>
+		<p>Now I am working to convert it to a REST service and show off how Linux Containers can be used to improve the development process. It will have Docker files and fig.yml files to quickly allow deployment and testing.</p>
 
-				<p><a href='https://github.com/darkmane/herocombat'>Git Repo</a></p>
-
-				<p><a href='https://github.com/darkmane/herocombat'>Hosted Instance</a></p>
+		<p><a href='http://github.com/darkmane/classictraveller'>Github</a></p>
 </div>
 </body>
 </html>
