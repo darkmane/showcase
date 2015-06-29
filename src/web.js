@@ -45,7 +45,8 @@ app.configure('development', function(){
 
 // app.get('/', routes.index);
 app.get('/', function(req, response) {
-		response.status(200).send(path.join(__dirname, 'public', 'index.html'));			
+		console.log(path.join(__dirname, 'public', 'index.html'));
+		response.status(200).sendfile(path.join(__dirname, 'public', 'index.html'));			
 });
 
 
