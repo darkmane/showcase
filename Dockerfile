@@ -1,4 +1,4 @@
-FROM node:0.10-slim
+FROM node:slim
 MAINTAINER Sean Chitwood <darkmane@gmail.com>
 
 RUN mkdir -p /var/www

@@ -4,10 +4,14 @@ nginx:
       - "DEFAULT_HOST=www.darkmane.me"
    volumes:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
+   ports:
+      - "80:80"
 showcase:
    image: darkmane/showcase
    environment:
       - "VIRTUAL_HOST=www.darkmane.me,192.168.99.100"
+   links:
+      - nginx
 herocombat:
    image: darkmane/herocombat
    environment:
