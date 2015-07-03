@@ -1,0 +1,15 @@
+{
+  "application": {
+    "name": "Sean Chitwood Showcase",
+    "title": "Testers Showcase"
+  },
+  "database": {
+    "host" : "",
+    "port" : ""
+  },
+  "globals" : {
+  },
+  "logger" :{
+    "log_dir" : "./log/"
+  }
+}
