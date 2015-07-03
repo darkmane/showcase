@@ -10,4 +10,4 @@ ADD src /var/www
 WORKDIR /var/www
 
 EXPOSE 3000
-ENTRYPOINT node web.js
+ENTRYPOINT npm install && node web.js
