@@ -1,4 +1,4 @@
-FROM node:0.10-wheezy
+FROM node:0.10-slim
 MAINTAINER Sean Chitwood <darkmane@gmail.com>
 
 RUN mkdir -p /var/www
@@ -8,7 +8,6 @@ VOLUME /var/www
 ADD src /var/www
 
 WORKDIR /var/www
-RUN npm install
 
 EXPOSE 3000
-ENTRYPOINT node web.js
+ENTRYPOINT npm install && node web.js
