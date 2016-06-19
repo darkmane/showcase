@@ -16,3 +16,9 @@ herocombat:
    image: darkmane/herocombat
    environment:
       - "VIRTUAL_HOST=herocombat.darkmane.me"
+gw2crafting:
+   image: darkmane/gw2crafting
+   environment:
+      - "VIRTUAL_HOST=gw2craft.darkmane.me"
+   links:
+      - nginx
