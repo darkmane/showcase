@@ -4,6 +4,9 @@ runtime: go
 api_version: go1
 
 handlers:
+- url: /.well-known
+  static_dir: _well-known
+        
 - url: /css/(.*\.css)
   mime_type: text/css
   static_files: static/css/\1
