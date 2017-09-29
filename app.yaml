@@ -1,34 +1,30 @@
 application: darkmane-showcase
-version: uno-1
+version: dos-2
 runtime: go
 api_version: go1
 
 handlers:
-- url: /.well-known
-  static_dir: _well-known
-        
-- url: /css/(.*\.css)
-  mime_type: text/css
-  static_files: static/css/\1
-  upload: static/css/(.*\.css)
+- url: /.*
+  script: _go_app
+  
                 
-- url: /(.*\.html)
-  mime_type: text/html
-  static_files: static/\1
-  upload: static/(.*\.html)
-                
-- url: /js/(.*\.js)
-  mime_type: text/javascript
-  static_files: static/js/\1
-  upload: static/js/(.*\.js)
-  # index files
-- url: /(.+)/
-  static_files: static/\1/index.html
-  upload: static/(.+)/index.html
-
-- url: /
-  static_files: static/index.html
-  upload: static/index.html
+#- url: /(.*\.html)
+#  mime_type: text/html
+#  static_files: static/\1
+#  upload: static/(.*\.html)
+#                
+#- url: /js/(.*\.js)
+#  mime_type: text/javascript
+#  static_files: static/js/\1
+#  upload: static/js/(.*\.js)
+#  # index files
+#- url: /(.+)/
+#  static_files: static/\1/index.html
+#  upload: static/(.+)/index.html
+#
+#- url: /
+#  static_files: static/index.html
+#  upload: static/index.html
 #- url: /.*.html
 #  static_files: public/*.html
 #  upload: public/*.html
