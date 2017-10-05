@@ -1,4 +1,3 @@
-application: darkmane-showcase
 version: dos-2
 runtime: go
 api_version: go1
