@@ -7,7 +7,9 @@ import (
 	"io/ioutil"
 	"mime"
 	"net/http"
-	//"strings"
+	"net/url"
+	"os"
+	"strings"
 
 	"cloud.google.com/go/storage"
 	"golang.org/x/net/context"
@@ -70,23 +72,48 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	path := r.URL.Path
-	host := r.URL.Host
+	host := lookupDomainDirectory(r.URL.Host, r.URL)
 	if appengine.IsDevAppServer() {
-		host = "www.darkmane.me"
+		host = os.Getenv("DEV_SERVER_DOMAIN")
+	}
+
+	if strings.HasSuffix(path, "/") {
+		path += "index.html"
 	}
 
 	log.Infof(ctx, "Host: %s, %s", host, path)
 	d.readFile(fmt.Sprintf("%s%s", host, path))
-	mime_type := mime.TypeByExtension(path)
-	fmt.Printf(mime_type)
+	extension := ".html"
+	file_parts := strings.Split(path, ".")
+	if len(file_parts) > 0 {
+		extension = file_parts[len(file_parts)-1]
+	}
+	mime_type := mime.TypeByExtension(fmt.Sprintf(".%s", extension))
+	log.Infof(ctx, "extension: %s, mime_type: %s", extension, mime_type)
 	w.Header().Set("Content-Type", mime_type)
 	if d.failed {
-		w.WriteHeader(http.StatusInternalServerError)
-		buf.WriteTo(w)
+		w.WriteHeader(http.StatusNotFound)
 	} else {
 		w.WriteHeader(http.StatusOK)
-		buf.WriteTo(w)
 	}
+	buf.WriteTo(w)
+}
+
+func lookupDomainDirectory(domain string, request_url *url.URL) string {
+	return_dir := domain
+	dom := strings.ToUpper(domain)
+	dom = strings.Replace(dom, "-", "", -1)
+	dom = strings.Replace(dom, ".", "_", -1)
+
+	env_dir := os.Getenv(dom)
+	if env_dir == "" {
+		env_dir = request_url.Query().Get("domain")
+	}
+	if env_dir != "" {
+		return_dir = env_dir
+	}
+
+	return return_dir
 }
 
 //[START read]
