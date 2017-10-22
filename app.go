@@ -74,7 +74,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	host := lookupDomainDirectory(r.URL.Host, r.URL)
 	if appengine.IsDevAppServer() {
-		host = os.Getenv("DEV_SERVER_DOMAIN")
+		host = r.URL.Query().Get("domain")
+		if host == "" {
+			host = os.Getenv("DEV_SERVER_DOMAIN")
+		}
 	}
 
 	if strings.HasSuffix(path, "/") {
